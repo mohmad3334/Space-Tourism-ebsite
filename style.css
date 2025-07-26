@@ -1,0 +1,1112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-page {
+    background-image: url(starter-code/assets/home/background-home-desktop.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+}
+
+.home-page header {
+    height: 100px;
+    width: 100%;
+    padding: 0 0 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.home-page header i {
+    display: none;
+}
+
+.home-page header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 55%;
+    background-color: #ffffff09;
+    backdrop-filter: blur(20px);
+    height: 60%;
+    color: white;
+    padding: 0 10%;
+}
+
+.home-page header nav li {
+    list-style: none;
+}
+
+.home-page header nav li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    position: relative;
+    word-spacing: 3px;
+    width: 107%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-page header nav li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transition: .3s;
+}
+
+.home-page header nav li a:hover::after {
+    width: 100%;
+}
+
+.home-page .content {
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5% 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.home-page .content .details {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+    color: white;
+}
+
+.home-page .content .details h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: #bbbbbb;
+}
+
+.home-page .content .details h1 {
+    font-size: 90px;
+    font-family: "Bellefair", serif;
+    font-weight: 300;
+}
+
+.home-page .content .details p {
+    font-family: "Barlow", sans-serif;
+    color: #bbbbbb;
+    word-spacing: 3px;
+}
+
+.home-page .content .explore {
+    height: 230px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+    font-family: "Bellefair", serif;
+    font-weight: 300;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.home-page .content .explore:hover {
+    transform: scale(0.95);
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.destination-page {
+    background-image: url(starter-code/assets/destination/background-destination-desktop.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10%;
+    position: relative;
+}
+
+.destination-page .planets {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.destination-page .planets h1 {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    word-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.destination-page .planets img {
+    height: 350px;
+}
+
+.planets-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 65%;
+    width: 40%;
+    flex-direction: column;
+    color: white;
+    font-family: "Bellefair", serif;
+    font-weight: 300;
+}
+
+.planets-details .planets-names {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.planets-details .planets-names li {
+    list-style: none;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    padding: 9px 0;
+    font-family: "Barlow Condensed", sans-serif;
+    letter-spacing: 2px;
+    color: #bbbbbb;
+}
+
+.planets-details .planets-names li::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transition: .3s;
+}
+
+.planets-details .planets-names li:hover {
+    color: white;
+}
+
+.planets-details .planets-names li:hover::after {
+    width: 100%;
+}
+
+.planets-details .name {
+    font-size: 100px;
+    font-weight: 300;
+}
+
+.planets-details p {
+    font-family: "Barlow Condensed", sans-serif;
+    color: #bbbbbb;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.planets-details hr {
+    width: 100%;
+}
+
+.planets-details .destination-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 60px 0 0;
+}
+
+.planets-details .destination-time .destination p {
+    margin-bottom: 10px;
+}
+
+.planets-details .destination-time .travel-time p {
+    margin-bottom: 10px;
+}
+
+
+
+.planets-details .destination-time .destination p:nth-child(2) {
+    font-size: 32px;
+    font-family: "Bellefair", serif;
+    text-transform: uppercase;
+}
+
+.planets-details .destination-time .travel-time p:nth-child(2) {
+    font-size: 32px;
+    font-family: "Bellefair", serif;
+    text-transform: uppercase;
+}
+
+.planets-names li.active {
+    color: white;
+}
+
+.crew-page {
+    background-image: url(starter-code/assets/crew/background-crew-desktop.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 10%
+}
+
+.crew-page .crew-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 80%;
+    width: 60%;
+    flex-direction: column;
+    color: white;
+    font-family: "Bellefair", serif;
+    font-weight: 300;
+}
+
+.crew-page .crew-details h1 {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.crew-page .crew-details .name-job .role {
+    font-size: 30px;
+    font-weight: 300;
+    color: #bbbbbb;
+}
+
+.crew-page .crew-details .name-job .crew-name {
+    font-size: 50px;
+    font-weight: 300;
+    color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.crew-page .crew-details .crew-bio {
+    color: #bbbbbb;
+    width: 64%;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+}
+
+.crew-page .crew-picture {
+    position: relative;
+    height: 100%;
+    width: 40%;
+}
+
+.crew-page .crew-picture img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.crew-page .crew-details .dots {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+
+.crew-page .crew-details .dots .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #4f4f4f;
+    cursor: pointer;
+}
+
+.crew-page .crew-details .dots .dot-active {
+    background-color: white;
+}
+
+.technology-page {
+    background-image: url(starter-code/assets/technology/background-technology-desktop.jpg);
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5% 10% 0;
+}
+
+.technology-page h1 {
+    color: white;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    word-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.technology-page .technology-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65%;
+    position: relative;
+}
+
+.technology-page .technology-center .numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 2% 0;
+}
+
+.technology-page .technology-center .numbers .n-active {
+    background-color: white;
+    color: black;
+}
+
+.technology-page .technology-center .numbers h1 {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #bbbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bellefair", serif;
+    font-size: 35px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+    margin: 0;
+}
+
+.technology-page .technology-center .numbers h1:nth-child(1)::after {
+    content: "1";
+    position: absolute;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bellefair", serif;
+    font-size: 35px;
+    font-weight: 100;
+    color: black;
+    transition: .3s;
+}
+
+.technology-page .technology-center .numbers h1:nth-child(2)::after {
+    content: "2";
+    position: absolute;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bellefair", serif;
+    font-size: 35px;
+    font-weight: 100;
+    color: black;
+    transition: .3s;
+}
+
+.technology-page .technology-center .numbers h1:nth-child(3)::after {
+    content: "3";
+    position: absolute;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    transform: scale(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bellefair", serif;
+    font-size: 35px;
+    font-weight: 100;
+    color: black;
+    transition: .3s;
+}
+
+.technology-page .technology-center .numbers h1:hover::after {
+    transform: scale(1);
+    color: black;
+}
+
+.technology-page .technology-center .technology-details {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2% 0;
+}
+
+.technology-page .technology-center img {
+    width: 30%;
+}
+
+.technology-page .technology-center .technology-details h2 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    color: #bbbbbb;
+}
+
+.technology-page .technology-center .technology-details h1 {
+    font-family: "Bellefair", serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: white;
+}
+
+.technology-page .technology-center .technology-details p {
+    color: #bbbbbb;
+    font-size: 20px;
+    font-family: "Barlow Condensed", sans-serif;
+    width: 100%;
+}
+
+.technology-page .technology-center img {
+    position: relative;
+}
+
+
+/* fonts 
+    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Barlow", sans-serif;
+    font-family: "Bellefair", serif; */
+
+
+
+@media (max-width: 1100px) {
+    .home-page header nav li a span {
+        display: none;
+    }
+}
+
+@media (max-width: 1067px) {
+    .technology-page .technology-center .technology-details {
+        justify-content: space-around;
+    }
+
+    .technology-page .technology-center .technology-details p {
+        font-size: 100%;
+    }
+
+    .technology-page .technology-center .technology-details h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width:1063px) {
+    .technology-page .technology-center .technology-details h1 {
+        font-size: 37px;
+    }
+}
+
+@media (max-width:1050px) {}
+
+@media (max-width:986px) {
+    .crew-page .crew-details .name-job .crew-name {
+        font-size: 40px;
+    }
+
+    .destination-page .planets img {
+        height: 300px;
+    }
+
+    .planets-details .name {
+        font-size: 70px;
+    }
+
+    .planets-details .destination-time .destination p:nth-child(2) {
+        font-size: 25px;
+    }
+
+    .planets-details .destination-time .travel-time p:nth-child(2) {
+        font-size: 25px;
+    }
+
+    .technology-page .technology-center .technology-details h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width:923px) {
+    .technology-page .technology-center img {
+        width: 36%;
+    }
+
+    .technology-page .technology-center .numbers h1 {
+        height: 70px;
+        width: 70px;
+    }
+
+    .technology-page .technology-center .numbers h1:nth-child(1)::after {
+        height: 70px;
+        width: 70px;
+    }
+
+    .technology-page .technology-center .numbers h1:nth-child(2)::after {
+        height: 70px;
+        width: 70px;
+    }
+
+    .technology-page .technology-center .numbers h1:nth-child(3)::after {
+        height: 70px;
+        width: 70px;
+    }
+
+    .planets-details .destination-time {
+        padding: 20px 20px 0 0;
+    }
+
+    .planets-details p {
+        font-size: 15px;
+    }
+
+    .planets-details .planets-names li {
+        font-size: 16px;
+    }
+
+    .destination-page .planets h1 {
+        font-size: 28px;
+    }
+
+    .planets-details .name {
+        font-size: 65px;
+    }
+
+    .home-page .content .details h2 {
+        font-size: 28px;
+    }
+
+    .home-page .content .details h1 {
+        font-size: 85px;
+    }
+
+    .home-page .content .details p {
+        font-size: 14px;
+    }
+
+    .crew-page .crew-details h1 {
+        font-size: 28px;
+    }
+
+    .technology-page h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width:865px) {
+    .home-page header nav li a {
+        font-size: 16px;
+    }
+
+    .home-page header nav {
+        padding: 0 6%;
+    }
+
+    .crew-page .crew-details .name-job .crew-name {
+        font-size: 33px;
+    }
+
+    .crew-page .crew-details .name-job .role {
+        font-size: 25px;
+    }
+
+    .crew-page .crew-details .crew-bio {
+        font-size: 15px;
+        width: 70%;
+    }
+
+    .crew-page .crew-details .dots {
+        width: 18%;
+    }
+
+    .crew-page .crew-details .dots .dot {
+        height: 10px;
+        width: 10px;
+    }
+
+    .technology-page .technology-center .numbers {
+        height: 86%;
+    }
+
+    .technology-page .technology-center .technology-details h1 {
+        font-size: 29px;
+    }
+
+    .home-page .content .explore {
+        height: 215px;
+        width: 215px;
+    }
+}
+
+@media (max-width:825px) {
+    .planets-details .planets-names li {
+        font-size: 15px;
+    }
+
+    .destination-page .planets img {
+        height: 280px;
+    }
+
+    .planets-details .planets-names {
+        width: 80%;
+    }
+
+    .planets-details p {
+        font-size: 14px;
+    }
+
+    .planets-details .destination-time .destination p:nth-child(2) {
+        font-size: 23px;
+    }
+
+    .planets-details .destination-time .travel-time p:nth-child(2) {
+        font-size: 23px;
+    }
+}
+
+@media (max-width:768px) {
+    .home-page header {
+        align-items: center;
+    }
+
+    .home-page header nav li {
+        list-style: none;
+        padding: 11px;
+    }
+
+    .home-page header .logo {
+        margin: 20px 0 0 0;
+    }
+
+    .home-page header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        flex-direction: column;
+        background-color: rgba(10, 13, 25, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 120px 0 0 0;
+        transition: right 0.3s ease;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .home-page header nav.nav-open {
+        right: 0;
+    }
+
+    .home-page header nav li a::after{
+        width: 0%;
+    }
+
+    .home-page header nav i {
+        display: block;
+        scale: 1.4;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .menu {
+        display: block !important;
+        font-size: 28px;
+        color: white;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        z-index: 200;
+        cursor: pointer;
+    }
+
+
+    .home-page header nav .close {
+        display: block !important;
+        font-size: 24px;
+        color: white;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+
+    .home-page {
+        background-image: url(starter-code/assets/home/background-home-tablet.jpg);
+    }
+
+    .home-page .content {
+        height: 458px;
+        padding: 0 5%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-page .content .details {
+        height: 65%;
+        width: 100%;
+        align-items: center;
+    }
+
+    .home-page .content .explore {
+        height: 170px;
+        width: 170px;
+        font-size: 28px;
+    }
+
+    .destination-page{
+        background-image: url(starter-code/assets/destination/background-destination-tablet.jpg);
+        padding: 0 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .destination-page .planets img {
+        height: 215px;
+    }
+    .destination-page .planets-details {
+        align-items: center;
+        
+    }
+    .destination-page .planets-details .planets-names {
+        margin: 0;
+    }
+    .destination-page .planets-details{
+        margin-bottom: 10px;
+    }
+    .planets-details .destination-time{
+        padding: 9px 0 0 0;
+    }
+    .planets-details .destination-time .destination p:nth-child(2),
+    .planets-details .destination-time .travel-time p:nth-child(2) {
+        font-size: 20px;
+    }
+
+
+
+    .crew-page {
+        background-image: url(starter-code/assets/crew/background-crew-tablet.jpg);
+        padding: 0 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .crew-page .crew-details {
+        width: 100%;
+        align-items: center;
+    }
+    .crew-page .crew-details h1 {
+        margin-bottom: 20px;
+    }
+    .crew-page .crew-details .name-job {
+        width: 100%;
+        text-align: center;
+    }
+    .crew-page .crew-details .name-job .crew-name {
+        font-size: 30px;
+    }
+    .crew-page .crew-details .name-job .role {
+        font-size: 20px;
+    }
+    .crew-page .crew-details .crew-bio {
+        width: 80%;
+        font-size: 15px;
+    }
+    .crew-page .crew-picture {
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .crew-page .crew-picture img {
+        max-width: 200px;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .crew-page .crew-details .dots {
+        width: 30%;
+        margin: 20px auto;
+    }
+    .crew-page .crew-details .dots .dot {
+        height: 8px;
+        width: 8px;
+    }
+    .crew-page .crew-details .dots .dot-active {
+        background-color: white;
+    }
+    .technology-page {
+        background-image: url(starter-code/assets/technology/background-technology-tablet.jpg);
+        padding: 0 5%;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .technology-page h1 {
+        margin-bottom: 20px;
+    }
+    .technology-page .technology-center {
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+    }
+    .technology-page .technology-center img {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .technology-page .technology-center .numbers {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .technology-page .technology-center .numbers h1 {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+    }
+    .technology-page .technology-center .numbers h1:nth-child(1)::after,
+    .technology-page .technology-center .numbers h1:nth-child(2)::after,
+    .technology-page .technology-center .numbers h1:nth-child(3)::after {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+    }
+    .technology-page .technology-center .technology-details {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .technology-page .technology-center .technology-details h1 {
+        font-size: 30px;
+    }
+    .technology-page .technology-center .technology-details p {
+        font-size: 16px;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .technology-page .technology-center .numbers h1:hover {
+        background-color: white;
+        color: black;
+    }
+    .technology-page .technology-center .numbers h1:hover::after {
+        transform: scale(1);
+        color: black;
+    }
+
+}
+@media (max-width:625px) {
+    .destination-page .planets-details{
+        width:55%;
+    }
+}
+@media (max-width:527px){
+    .home-page .content{
+        padding-bottom: 2%;
+    }
+    .destination-page .planets img{
+        height: 200px;
+    }
+    .destination-page .planets-details {
+        width: 70%;
+    }
+    .technology-page .technology-center .numbers{
+        width: 60%;
+    }
+    .technology-page .technology-center .numbers h1 {
+        height: 60px;
+        width: 60px;
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+
+    .crew-page .crew-details .name-job .crew-name {
+        font-size: 28px;
+    }
+
+    .crew-page .crew-details .name-job .role {
+        font-size: 20px;
+    }
+
+    .crew-page .crew-details .crew-bio {
+        width: 90%;
+        font-size: 14px;
+    }
+    .destination-page .planets h1 {
+        font-size: 27px;
+    }
+}
+@media(max-width: 425px) {
+    .home-page .content .details h2{
+        font-size: 20px;
+    }
+    .home-page .content .details h1 {
+        font-size: 75px;
+    }
+    .home-page .content .details p {
+        font-size: 11px;
+        width: 100%;
+    }
+    .home-page .content .explore {
+        height: 150px;
+        width: 150px;
+        font-size: 24px;
+    }
+    .destination-page .planets h1 {
+        font-size: 20px;
+    }
+    .destination-page .planets-details {
+        width: 85%;
+    }
+    .planets-details .name {
+        font-size: 55px;
+    }
+    .planets-details .planets-names li {
+        font-size: 14px;
+    }
+    .planets-details .destination-time .destination p:nth-child(2),
+    .planets-details .destination-time .travel-time p:nth-child(2) {
+        font-size: 18px;
+    }
+    .crew-page {
+        background-image: url(starter-code/assets/crew/background-crew-tablet.jpg);
+        padding: 5% 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .crew-page .crew-details h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .crew-page .crew-details .name-job .crew-name {
+        font-size: 22px;
+    }
+    .crew-page .crew-details .crew-bio {
+        width: 90%;
+        font-size: 12px;
+    }
+    .technology-page h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .technology-page .technology-center .numbers {
+        width: 65%;
+    }
+    .technology-page .technology-center .technology-details h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .technology-page .technology-center .technology-details h1 {
+        font-size: 26px;
+    }
+    .technology-page .technology-center .technology-details p{
+        font-size: 14px;
+    }
+    .technology-page .technology-center img{
+        width: 75%;
+    }
+}
+@media (max-width:320px) {
+    .home-page .content .details h2 {
+        font-size: 17px;
+    }
+    .home-page .content .details p{
+        font-size: 10px;
+    }
+    .home-page .content .details h2 {
+        font-size: 15px;
+    }
+    .home-page .content .details h1 {
+        font-size: 69px;
+    }
+    .destination-page .planets h1 {
+        font-size: 17px;
+    }
+    .destination-page .planets img {
+        height: 180px;
+    }
+    .technology-page .technology-center .numbers {
+        width: 70%;
+    } 
+    .technology-page .technology-center .numbers h1 {
+        height: 50px;
+        width: 50px;
+    }
+    .technology-page .technology-center .technology-details h2 {
+        font-size: 17px;
+    }
+    .technology-page .technology-center .technology-details p {
+        font-size: 12px;
+    }
+}
